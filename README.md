@@ -55,22 +55,29 @@ query {
     id
     time
     status
-    createdAt
-    updatedAt
+    name
+    address
   }
 }
 
 Create a new appointment:
 
 mutation {
-  createAppointment(time: "2025-08-01T14:00:00Z") {
+  createAppointment(
+    time: "2025-08-01T14:00:00Z",
+    name: "Rahul Prasoon",
+    address: "Bangalore, India"
+  ) {
     appointment {
       id
       time
+      name
+      address
       status
     }
   }
 }
+
 
 Cancel an appointment:
 
